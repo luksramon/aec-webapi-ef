@@ -23,10 +23,11 @@ namespace aec_webapi_ef
         {
             var connectionString = Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<DbContexto>(options => options.UseSqlServer(connectionString));
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "AeC_Web_Api", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "AeC webapi Entity Framework - ECC", Version = "v1" });
             });
         }
 
@@ -36,11 +37,11 @@ namespace aec_webapi_ef
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Empyt Coffee Cups - AeC WebApi"));
-                // app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "aec_webapi_ef v1"));
             }
 
+            app.UseSwagger();
+            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Empyt Coffee Cups - AeC WebApi"));
+            
             app.UseHttpsRedirection();
 
             app.UseRouting();

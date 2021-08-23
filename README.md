@@ -1,8 +1,8 @@
 # Comandos iniciais:
 ``` bash
-  mkdir entity-framework
-  cd entity-framework
-  dotnet new mvc
+  mkdir aec-webapi-ef
+  cd aec-webapi-ef
+  dotnet new webapi
 ```
 
 # Comandos git:
@@ -12,7 +12,7 @@
   git commit -m "Iniciando projeto"
   code .gitignore # gerei o conteúdo para ignorar como (Windows, Linux, Mac, DotnetCore, VisualStudioCore) no link: https://www.toptal.com/developers/gitignore
   Criei o repositório e rodei os comandos
-  git remote add origin git@github.com:torneseumprogramador/entity-framework.git
+  git remote add origin git@github.com:luksramon/aec-webapi-ef
   git branch -M main
   git push -u origin main
 ```
