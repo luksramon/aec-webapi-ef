@@ -55,7 +55,6 @@ namespace aec_webapi_ef.Models
 
         [Column("numero", TypeName = "nvarchar")]
         [MaxLength(5)]
-        [Required]
         public string Numero { get; set; }
 
         [Column("bairro", TypeName = "nvarchar")]
