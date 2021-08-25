@@ -50,8 +50,7 @@ namespace aec_webapi_ef.Models
         public string Logradouro { get; set; }
 
         [Column("complemento", TypeName = "nvarchar")]
-        [MaxLength(150)]
-        [Required]
+        [MaxLength(150)]        
         public string Complemento { get; set; }
 
         [Column("numero", TypeName = "nvarchar")]

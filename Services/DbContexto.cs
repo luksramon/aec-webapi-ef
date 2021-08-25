@@ -11,7 +11,7 @@ namespace aec_webapi_ef.Services
 
             modelBuilder.Entity<Candidato>().HasIndex(u => u.Cpf).IsUnique();
 
-            // modelBuilder.Entity<Profissao>().HasIndex(p => p.Nome).IsUnique();
+            modelBuilder.Entity<Profissao>().HasIndex(p => p.Nome).IsUnique();
 
         }
         public DbSet<Candidato> Candidatos { get; set; }
